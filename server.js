@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(express.urlencoded());
 app.use(cors());
 
-app.use('/', express.static(path.join(__dirname, 'client')));
+app.use('/', express.static(path.join(__dirname, '/client')));
 
 let reqPath = path.join(__dirname, '/client');
 let errorPath = path.join(__dirname, '/client');
