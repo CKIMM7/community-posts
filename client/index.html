@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="./index.js" defer></script>
+    <script src="./display.js" defer></script>
+    <script src="./fetch.js" defer></script>
+    <script src="./routes.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>OffChest</title>
 </head>
 <body>
-    <p>OffChest</p>
+    <div id="welcome"></div>
+    <div id="menu">
+      <button onclick="routes()">to view posts</button>
+      <button onclick="routes('post')">to write a post</button>
+    </div>
+
+    <div id="content-container"></div>
+    <div id="form-container">
+      <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname">
+      </form>
+    </div>
+
 </body>
 </html>

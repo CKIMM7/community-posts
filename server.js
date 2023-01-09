@@ -27,6 +27,11 @@ app.get('/', (req, res)=> {
     res.sendFile(reqPath)
 });
 
+app.get('/api', (req, res)=> {
+    console.log('/api')
+    res.send(postsData)
+});
+
 //Users should be able to view other peoples' entries. (2)
 //working so far
 
@@ -34,8 +39,6 @@ app.get('/:id', (req, res)=> {
     const postIdSearch = postsData.findIndex(post => {
         return post.postId.toString() === req.params.id;
     })
-    console.log(postIdSearch);
-    //if(!postIdSearch) return res.status(404).send('this post does not exist')
     res.send(postsData[postIdSearch])
 });
 
