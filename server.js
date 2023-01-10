@@ -46,14 +46,17 @@ app.get('/:id', (req, res)=> {
 //Users should be able to anonymously post journal entries. (3)
 //Working so far with req.body
 app.post('/posts', (req, res)=> {
+
+    console.log('req.body')
     
     let postToAdd = req.body;
     postToAdd.postId = uniqueId();
     postToAdd.date = getDate();
 
     postsData.push(postToAdd);
-    updateJSON('db/posts.json', postsData);
+    console.log(postsData)
 
+    updateJSON('./dbj/posts.json', postsData);
     res.send(postsData);
 
 });
@@ -61,17 +64,20 @@ app.post('/posts', (req, res)=> {
 //Users should be able to comment on other people’s entries. (5)
 app.post('/comments', (req, res)=> {
 
+    
     let postId = req.body.postId;
     let comment = req.body;
     comment.commentId = uniqueId();
     comment.date = getDate();
+
+    console.log(comment)
 
     const findPostIndex = postsData.findIndex((post)=> {
         return post.postId == postId;
     })
 
     postsData[findPostIndex].comments.push(comment);
-    updateJSON('db/posts.json', postsData);
+    updateJSON('dbj/posts.json', postsData);
 
     res.send(postsData);
 });

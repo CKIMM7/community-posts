@@ -7,6 +7,7 @@
     <script src="./display.js" defer></script>
     <script src="./fetch.js" defer></script>
     <script src="./routes.js" defer></script>
+    <script src="./dom.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>OffChest</title>
 </head>
@@ -18,12 +19,11 @@
     </div>
 
     <div id="content-container"></div>
+    
     <div id="form-container">
       <form>
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname">
+        <input type="text" id="post-content" placeholder="write something..."><br>
+        <input type="submit" value="Submit" id="post-button">
       </form>
     </div>
 

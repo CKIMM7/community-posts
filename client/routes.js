@@ -12,6 +12,7 @@ const routes = (path) => {
             formContainer.style.display = 'none';
             getPosts()
         }
+
         else {
             contentContainer.style.display = 'flex';
             formContainer.style.display = 'none';
@@ -26,3 +27,7 @@ const routes = (path) => {
 }
 
 routes()
+
+
+
+
