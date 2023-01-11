@@ -3,14 +3,49 @@ const express =  require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const multer  = require('multer');
-const upload = multer({ dest: './client/images/post' });
+const fs = require('fs')
 
 const port = process.env.PORT || 3000;
 
+// Set The Storage Engine
+
+//destination: './client/images/post',
+
+//const upload = multer({ dest: './client/images/post' });
+
+// Set The Storage Engine
+const storage = multer.diskStorage({
+    destination: './client/images/post',
+    filename: function(req, file, cb){
+    console.log('multer callback')
+    console.log(file)
+    cb(null,file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+    }
+  });
+  
+  // Init Upload
+  const upload = multer({
+    storage: storage,
+    })
+  
+  // Check File Type
+  function checkFileType(file, cb){
+    // Allowed ext
+    const filetypes = /jpeg|jpg|png|gif/;
+    // Check ext
+    const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+    // Check mime
+    const mimetype = filetypes.test(file.mimetype);
+  
+    if(mimetype && extname){
+      return cb(null,true);
+    } else {
+      cb('Error: Images Only!');
+    }
+  }
 
 const app = express();
-
-//app.use(express.json())
+app.use(express.json())
 app.use(bodyParser.json());
 app.use(express.urlencoded());
 app.use(cors());
@@ -39,6 +74,7 @@ app.get('/api', (req, res)=> {
 //Users should be able to view other peoples' entries. (2)
 //working so far
 
+
 app.get('/:id', (req, res)=> {
     const postIdSearch = postsData.findIndex(post => {
         return post.postId.toString() === req.params.id;
@@ -49,18 +85,17 @@ app.get('/:id', (req, res)=> {
 
 //Users should be able to anonymously post journal entries. (3)
 //Working so far with req.body
-app.post('/posts', upload.single('photo'), (req, res)=> {
+app.post('/posts', upload.single('photo') ,(req, res)=> {
+console.log('req.file')
+console.log(req.file)
 
-    console.log('req.file')
-    console.log(req.file)
- 
-    //let postToAdd = JSON.parse(req.body.data);
-    postToAdd = req.body.data
+    let postToAdd = JSON.parse(req.body.data);
     console.log(postToAdd)
 
-    postToAdd.postId = uniqueId();
+    postToAdd.postId = uniqueId();  
     postToAdd.date = getDate();
-
+    postToAdd.img = `../images/post/${req.file.filename}`
+    
     postsData.push(postToAdd);
 
     updateJSON('./dbj/posts.json', postsData);

@@ -31,36 +31,12 @@
         "body": "asdf",
         "commentId": "lcqp6p5c6gijm5miplq",
         "date": "10/01/2023"
-      },
-      {
-        "postId": 1,
-        "body": "asdfasdfsdf",
-        "commentId": "lcqp6z15s3rvqe17a2n",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": 1,
-        "body": "aaa",
-        "commentId": "lcqr06b0uj9bwmccsd",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": 1,
-        "body": "asdf",
-        "commentId": "lcqs1m3ozl5hqqctzhb",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": 1,
-        "body": "aaaaa",
-        "commentId": "lcqs3d35jbpg4dbegzc",
-        "date": "10/01/2023"
       }
     ],
     "reactionEmoji": [
       {
         "type": "😀",
-        "count": 2
+        "count": 3
       },
       {
         "type": "😥",
@@ -179,6 +155,25 @@
     ],
     "img": "../images/background/landing_page_background.jpg"
   },
-  "{\"body\":\"damage\",\"comments\":[],\"reactionEmoji\":[{\"type\":\"😀\",\"count\":0},{\"type\":\"😥\",\"count\":0},{\"type\":\"😮\",\"count\":0}]}",
-  "[object Object]"
+  {
+    "body": "aaa",
+    "comments": [],
+    "reactionEmoji": [
+      {
+        "type": "😀",
+        "count": 0
+      },
+      {
+        "type": "😥",
+        "count": 0
+      },
+      {
+        "type": "😮",
+        "count": 0
+      }
+    ],
+    "postId": "lcs50amlectmewkhf77",
+    "date": "11/01/2023",
+    "img": "../images/post/photo-1673470298812.png"
+  }
 ]

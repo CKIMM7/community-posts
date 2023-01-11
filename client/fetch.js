@@ -12,6 +12,7 @@ const formData = new FormData();
 
 postButton.addEventListener("click", function(e) {
     e.preventDefault();
+
     let data = {
         body: postContent.value,
         comments: [],
@@ -30,10 +31,14 @@ postButton.addEventListener("click", function(e) {
     }
 
     let imgData = img.files[0]
-    console.log(imgData)
+
     formData.append("photo", imgData);
     formData.append("data", JSON.stringify(data));
+
+
     console.log(formData.get("photo"))
+    console.log(formData.get("data"))
+
     sendPost(formData)
   });
 
