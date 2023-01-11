@@ -174,158 +174,29 @@
       },
       {
         "type": "😮",
-        "count": 1
+        "count": 3
       }
     ],
     "img": "../images/background/landing_page_background.jpg"
   },
   {
-    "body": "new post",
-    "comments": [
-      {
-        "postId": "lcpghlx9mm8ge3qsa1",
-        "body": "hot",
-        "commentId": "lcqqp5ydx4lmasw3xc",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcpghlx9mm8ge3qsa1",
-        "body": "hot",
-        "commentId": "lcqqp6shm5zi9xgdlue",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcpghlx9mm8ge3qsa1",
-        "body": "ddd",
-        "commentId": "lcqr27e1pa3vxl1kbug",
-        "date": "10/01/2023"
-      }
-    ],
-    "reactionEmoji": [],
-    "postId": "lcpghlx9mm8ge3qsa1",
-    "date": "9/01/2023"
-  },
-  {
-    "body": "new post test",
+    "body": "new",
     "comments": [],
-    "reactionEmoji": [],
-    "postId": "lcpgj2ds9wqnrx60n8p",
-    "date": "9/01/2023"
-  },
-  {
-    "body": "asdf",
-    "comments": [
+    "reactionEmoji": [
       {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "hot",
-        "commentId": "lcqqpjk1ivo323ky56j",
-        "date": "10/01/2023"
+        "type": "😀",
+        "count": 19
       },
       {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "dang",
-        "commentId": "lcqqrfez0oebvn7vcpqm",
-        "date": "10/01/2023"
+        "type": "😥",
+        "count": 17
       },
       {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "aaa",
-        "commentId": "lcqr1n3ru1t1zvdrl",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "ddfdfs",
-        "commentId": "lcqr42rxa8kat26qvv",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "asdf",
-        "commentId": "lcqr4xjydefm4n96yvs",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "dfsf",
-        "commentId": "lcqrb2wikkuid3ru0mq",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "dsdf",
-        "commentId": "lcqrep3grkwi5yhnp6a",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "aaa",
-        "commentId": "lcqrf5p0r04wncj6d1m",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "gaga",
-        "commentId": "lcqrh9xgpass4y2xo4",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "dddd",
-        "commentId": "lcqrhu9tugjgg5ogidp",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "dang",
-        "commentId": "lcqrj6ipz722lgy5yoe",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "sdfg",
-        "commentId": "lcqrldjdd6o40uy4mfq",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "sadf",
-        "commentId": "lcqrv3cbx61cpot9klj",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "aaaa",
-        "commentId": "lcqry9x4h4z2wimpf7",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "fuk",
-        "commentId": "lcqrzn8k04ezuaj5t6g4",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "update",
-        "commentId": "lcqs2d1eeklz56fpk3g",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "updatedfdf",
-        "commentId": "lcqs4iv2pbwmruj3aql",
-        "date": "10/01/2023"
-      },
-      {
-        "postId": "lcqn6kpb9o00rtygsn9",
-        "body": "aaaa",
-        "commentId": "lcqs6o5bz1doqw93i9",
-        "date": "10/01/2023"
+        "type": "😮",
+        "count": 29
       }
     ],
-    "reactionEmoji": [],
-    "postId": "lcqn6kpb9o00rtygsn9",
-    "date": "10/01/2023"
+    "postId": "lcrl29neo3ynpn9p3hr",
+    "date": "11/01/2023"
   }
 ]

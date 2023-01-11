@@ -94,11 +94,12 @@ background: rgba(0, 0, 0, 0.5);
 }
 
 .comment-input {
-    width: 70%;
-    height: 20px;
+width: 70%;
+height: 20px;
 }
 
 .emojis {
+color: white;
 display: flex;
 justify-content: end;
 }

@@ -87,16 +87,26 @@ app.post('/comments', (req, res)=> {
 app.post('/emojis', (req, res)=> {
     let postId = req.body.postId;
     let emojiToAdd = req.body.emojiToAdd;
+
+    console.log(postId)
+    console.log(emojiToAdd)
+
     const findPostIndex = postsData.findIndex((post)=> {
         return post.postId == postId;
     })
-    const emojiArray = postsData[findPostIndex].reactionEmoji.find((emoji)=> {
+
+    const emojiToIncrement = postsData[findPostIndex].reactionEmoji.find((emoji)=> {
         return emoji.type === emojiToAdd;
     })
+
+    console.log('emojiToIncrement')
+    console.log(emojiToIncrement)
+
     let emojiObj = { type: emojiToAdd,
         count: 1 }
-    emojiArray? emojiArray.count++ : (postsData[findPostIndex].reactionEmoji.push(emojiObj))
-    updateJSON('db/posts.json', postsData);
+
+        emojiToIncrement ? emojiToIncrement.count++ : (postsData[findPostIndex].reactionEmoji.push(emojiObj))
+    updateJSON('dbj/posts.json', postsData);
     res.send(postsData);
 });
 

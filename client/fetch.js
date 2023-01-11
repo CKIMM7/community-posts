@@ -14,7 +14,18 @@ postButton.addEventListener("click", function(e) {
     let data = {
         body: postContent.value,
         comments: [],
-        reactionEmoji: []
+        reactionEmoji: [{
+            "type": "😀",
+            "count": 0
+          },
+          {
+            "type": "😥",
+            "count": 0
+          },
+          {
+            "type": "😮",
+            "count": 0
+          }]
     }
     sendPost(data)
   });
@@ -110,13 +121,13 @@ const sendComment = (postId, e) => {
  
              //reference node
              let inputList = document.querySelectorAll('.comment-input');
-             console.log(inputList[findPostIndex -1])
+             console.log(inputList[findPostIndex])
  
              //parent node
              let parentNode = document.querySelectorAll('.comments');
              console.log(parentNode[findPostIndex])
 
-             parentNode[findPostIndex].insertBefore(comment, inputList[findPostIndex -1]);
+             parentNode[findPostIndex].insertBefore(comment, inputList[findPostIndex]);
 
         }   
 
@@ -159,7 +170,67 @@ const sendComment = (postId, e) => {
     }    
 }
    
+const incrementEmoji = (type, count, postId) => {
+    console.log(type)
+    console.log(count)
+    console.log(postId)
 
+    let emojiIndex = -1
+    let input = {
+        postId: postId,
+        emojiToAdd: type
+    }
+
+    let url = `http://localhost:3000/emojis`
+    let obj = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+          },
+        body: JSON.stringify(input)
+        }
+
+    return new Promise(async (res, rej) => {
+
+        try {
+            const response = await fetch(url, obj);
+            const data = await response.json();
+
+            //update dom for emojis
+
+            let findPostIndex = data.findIndex((post)=> {
+                return post.postId == postId;
+            })
+            
+            const emojiToIncrement = data[findPostIndex].reactionEmoji.find((emoji)=> {
+                return emoji.type === type;
+            })
+
+            //emojiContainer for the right post
+            let emojiContainer = document.querySelectorAll('.emojis')[findPostIndex]
+
+            
+            //find right emoji inside the right emojiContainer
+            let emojiNode =  emojiContainer.childNodes.forEach(n => {
+                console.log(n)  
+                emojiIndex++
+
+                if(`'${n.childNodes[0].innerText}'`.includes(`'${type}'`)) {
+                    console.log(emojiIndex)
+                    count++
+                    console.log(parseInt(n.childNodes[1].textContent++))
+                }
+            })
+
+            res(data)
+        } catch (err) {
+            console.log(err)
+            rej(`${err}`)
+        }
+    })
+    
+
+}
 
 
 

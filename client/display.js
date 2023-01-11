@@ -6,7 +6,6 @@ const formContainer = document.querySelector('#form-container');
 let postsGlobal;
 let show = false;
 
-
 const displayPosts = () => {
 
     console.log(postsGlobal)
@@ -36,7 +35,6 @@ const displayPosts = () => {
         commentButton.textContent = 'comments';
         commentSection.style.display = 'none' 
         commentInput.addEventListener("keydown", sendComment.bind(null, p.postId));
-        //console.log(commentInput)
 
         commentButton.onclick = function(){
             show = !show
@@ -77,7 +75,6 @@ const displayPosts = () => {
 
         commentSection.append(commentInput)
 
-
         if(p.reactionEmoji) {
             
             p.reactionEmoji.forEach(e => {
@@ -90,19 +87,16 @@ const displayPosts = () => {
             emojiCount.textContent = e.count;
 
             emojiType.onclick = function(){
-                
-                console.log(e.type)
-                console.log(e.count)
+            
+                incrementEmoji(e.type, e.count, p.postId)
             }
 
             emoji.append(emojiType, emojiCount)
             emojiSection.append(emoji)
         })  
+    }
 
-    }});
-}
-
-
+});}
 
 
 
