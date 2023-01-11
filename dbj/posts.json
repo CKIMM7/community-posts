@@ -36,15 +36,15 @@
     "reactionEmoji": [
       {
         "type": "😀",
-        "count": 3
-      },
-      {
-        "type": "😥",
         "count": 4
       },
       {
+        "type": "😥",
+        "count": 8
+      },
+      {
         "type": "😮",
-        "count": 3
+        "count": 6
       }
     ],
     "img": "../images/background/road_to_mount.jpg"
@@ -175,5 +175,47 @@
     "postId": "lcs50amlectmewkhf77",
     "date": "11/01/2023",
     "img": "../images/post/photo-1673470298812.png"
+  },
+  {
+    "body": "bla bla",
+    "comments": [],
+    "reactionEmoji": [
+      {
+        "type": "😀",
+        "count": 1
+      },
+      {
+        "type": "😥",
+        "count": 0
+      },
+      {
+        "type": "😮",
+        "count": 1
+      }
+    ],
+    "postId": "lcs53ejogt1rr3675i",
+    "date": "11/01/2023",
+    "img": "../images/post/photo-1673470443865.png"
+  },
+  {
+    "body": "file type",
+    "comments": [],
+    "reactionEmoji": [
+      {
+        "type": "😀",
+        "count": 0
+      },
+      {
+        "type": "😥",
+        "count": 0
+      },
+      {
+        "type": "😮",
+        "count": 0
+      }
+    ],
+    "postId": "lcs544p09wrmz2l8hn9",
+    "date": "11/01/2023",
+    "img": "../images/post/photo-1673470477753.png"
   }
 ]

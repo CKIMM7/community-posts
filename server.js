@@ -17,8 +17,6 @@ const port = process.env.PORT || 3000;
 const storage = multer.diskStorage({
     destination: './client/images/post',
     filename: function(req, file, cb){
-    console.log('multer callback')
-    console.log(file)
     cb(null,file.fieldname + '-' + Date.now() + path.extname(file.originalname));
     }
   });
@@ -26,10 +24,15 @@ const storage = multer.diskStorage({
   // Init Upload
   const upload = multer({
     storage: storage,
+    limits:{fileSize: 1000000},
+    fileFilter: function(req, file, cb){
+      checkFileType(file, cb);
+    }
     })
   
   // Check File Type
   function checkFileType(file, cb){
+    console.log('checkFileType')
     // Allowed ext
     const filetypes = /jpeg|jpg|png|gif/;
     // Check ext
@@ -86,16 +89,22 @@ app.get('/:id', (req, res)=> {
 //Users should be able to anonymously post journal entries. (3)
 //Working so far with req.body
 app.post('/posts', upload.single('photo') ,(req, res)=> {
-console.log('req.file')
-console.log(req.file)
+
+    if(!req.body.data.body) {
+
+        //handle error here somehow
+    }
+
+    if(req.file) {
+        postToAdd.img = `../images/post/${req.file.filename}`
+    }
 
     let postToAdd = JSON.parse(req.body.data);
     console.log(postToAdd)
 
     postToAdd.postId = uniqueId();  
     postToAdd.date = getDate();
-    postToAdd.img = `../images/post/${req.file.filename}`
-    
+
     postsData.push(postToAdd);
 
     updateJSON('./dbj/posts.json', postsData);

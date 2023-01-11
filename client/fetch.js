@@ -59,8 +59,10 @@ postButton.addEventListener("click", function(e) {
         try {
             const response = await fetch(url, obj);
             const data = await response.json();
+            console.log(data)
             res(data)
         } catch (err) {
+
             console.log(err)
             rej(`${err}`)
         }
@@ -226,7 +228,7 @@ const incrementEmoji = (type, count, postId) => {
             let emojiNode =  emojiContainer.childNodes.forEach(n => {
                 console.log(n)  
                 if(`'${n.childNodes[0].innerText}'`.includes(`'${type}'`)) {
-                    count++
+                    console.log(n.childNodes[1].innerText++)
                 }
             })
 
