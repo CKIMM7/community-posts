@@ -217,5 +217,26 @@
     "postId": "lcs544p09wrmz2l8hn9",
     "date": "11/01/2023",
     "img": "../images/post/photo-1673470477753.png"
+  },
+  {
+    "body": "firebase",
+    "comments": [],
+    "reactionEmoji": [
+      {
+        "type": "😀",
+        "count": 0
+      },
+      {
+        "type": "😥",
+        "count": 0
+      },
+      {
+        "type": "😮",
+        "count": 0
+      }
+    ],
+    "img": "../images/post/photo-1673473719136.png",
+    "postId": "lcs71lrcmflgu4pg5an",
+    "date": "11/01/2023"
   }
 ]
