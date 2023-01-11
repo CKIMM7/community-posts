@@ -1,13 +1,17 @@
-const path = require('path')
+const path = require('path');
 const express =  require('express');
-const cors = require('cors')
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const multer  = require('multer');
+const upload = multer({ dest: './client/images/post' });
 
 const port = process.env.PORT || 3000;
 
 
 const app = express();
 
-app.use(express.json())
+//app.use(express.json())
+app.use(bodyParser.json());
 app.use(express.urlencoded());
 app.use(cors());
 
@@ -45,16 +49,19 @@ app.get('/:id', (req, res)=> {
 
 //Users should be able to anonymously post journal entries. (3)
 //Working so far with req.body
-app.post('/posts', (req, res)=> {
+app.post('/posts', upload.single('photo'), (req, res)=> {
 
-    console.log(req.body)
-    
-    let postToAdd = req.body;
+    console.log('req.file')
+    console.log(req.file)
+ 
+    //let postToAdd = JSON.parse(req.body.data);
+    postToAdd = req.body.data
+    console.log(postToAdd)
+
     postToAdd.postId = uniqueId();
     postToAdd.date = getDate();
 
     postsData.push(postToAdd);
-    console.log(postsData)
 
     updateJSON('./dbj/posts.json', postsData);
     res.send(postsData);

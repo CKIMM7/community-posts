@@ -12,16 +12,8 @@ const formData = new FormData();
 
 postButton.addEventListener("click", function(e) {
     e.preventDefault();
-    let imgData = img.files[0]
-    console.log(imgData)
-    formData.append("photo", imgData);
-    console.log(formData.get("photo"))
-
-
-
     let data = {
         body: postContent.value,
-        img: formData,
         comments: [],
         reactionEmoji: [{
             "type": "😀",
@@ -37,10 +29,40 @@ postButton.addEventListener("click", function(e) {
           }]
     }
 
-    sendPost(data)
+    let imgData = img.files[0]
+    console.log(imgData)
+    formData.append("photo", imgData);
+    formData.append("data", JSON.stringify(data));
+    console.log(formData.get("photo"))
+    sendPost(formData)
   });
 
+  const sendPost = (input) => {
+
+    //console.log(input.get("photo"))
+    let url = `http://localhost:3000/posts`
+    let obj = {
+        method: 'POST',
+        headers: {
+        'Accept': 'application/json',
+        },
+        body: input
+        }
+
+    return new Promise(async (res, rej) => {
+
+        try {
+            const response = await fetch(url, obj);
+            const data = await response.json();
+            res(data)
+        } catch (err) {
+            console.log(err)
+            rej(`${err}`)
+        }
+    })
+}
   
+
 const getPosts = () => {
 
 
@@ -62,31 +84,6 @@ const getPosts = () => {
     })
 }
 
-const sendPost = (input) => {
-
-    let url = `http://localhost:3000/posts`
-    let obj = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-          },
-        body: JSON.stringify(input)
-        }
-
-    console.log(input)
-
-    return new Promise(async (res, rej) => {
-
-        try {
-            const response = await fetch(url, obj);
-            const data = await response.json();
-            res(data)
-        } catch (err) {
-            console.log(err)
-            rej(`${err}`)
-        }
-    })
-}
 
 const sendComment = (postId, e) => {
 

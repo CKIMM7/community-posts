@@ -68,7 +68,7 @@
       },
       {
         "type": "😮",
-        "count": 1
+        "count": 3
       }
     ],
     "img": "../images/background/road_to_mount.jpg"
@@ -122,11 +122,11 @@
     "reactionEmoji": [
       {
         "type": "😀",
-        "count": 2
+        "count": 3
       },
       {
         "type": "😥",
-        "count": 9
+        "count": 10
       },
       {
         "type": "😮",
@@ -170,201 +170,15 @@
       },
       {
         "type": "😥",
-        "count": 4
+        "count": 6
       },
       {
         "type": "😮",
-        "count": 3
+        "count": 4
       }
     ],
     "img": "../images/background/landing_page_background.jpg"
   },
-  {
-    "body": "new",
-    "comments": [],
-    "reactionEmoji": [
-      {
-        "type": "😀",
-        "count": 19
-      },
-      {
-        "type": "😥",
-        "count": 17
-      },
-      {
-        "type": "😮",
-        "count": 29
-      }
-    ],
-    "postId": "lcrl29neo3ynpn9p3hr",
-    "date": "11/01/2023"
-  },
-  {
-    "body": "dd",
-    "img": {},
-    "comments": [],
-    "reactionEmoji": [
-      {
-        "type": "😀",
-        "count": 0
-      },
-      {
-        "type": "😥",
-        "count": 0
-      },
-      {
-        "type": "😮",
-        "count": 0
-      }
-    ],
-    "postId": "lcrod0d4jpb2odw43h",
-    "date": "11/01/2023"
-  },
-  {
-    "body": "",
-    "img": {},
-    "comments": [],
-    "reactionEmoji": [
-      {
-        "type": "😀",
-        "count": 0
-      },
-      {
-        "type": "😥",
-        "count": 0
-      },
-      {
-        "type": "😮",
-        "count": 0
-      }
-    ],
-    "postId": "lcrof3l4kvaixinvid9",
-    "date": "11/01/2023"
-  },
-  {
-    "body": "asdf",
-    "img": {},
-    "comments": [],
-    "reactionEmoji": [
-      {
-        "type": "😀",
-        "count": 0
-      },
-      {
-        "type": "😥",
-        "count": 0
-      },
-      {
-        "type": "😮",
-        "count": 0
-      }
-    ],
-    "postId": "lcrofxaungzq8dc1ku",
-    "date": "11/01/2023"
-  },
-  {
-    "body": "sdf",
-    "img": {},
-    "comments": [],
-    "reactionEmoji": [
-      {
-        "type": "😀",
-        "count": 0
-      },
-      {
-        "type": "😥",
-        "count": 0
-      },
-      {
-        "type": "😮",
-        "count": 0
-      }
-    ],
-    "postId": "lcrokwtmken4f5mian",
-    "date": "11/01/2023"
-  },
-  {
-    "body": "dfdf",
-    "img": {},
-    "comments": [],
-    "reactionEmoji": [
-      {
-        "type": "😀",
-        "count": 0
-      },
-      {
-        "type": "😥",
-        "count": 0
-      },
-      {
-        "type": "😮",
-        "count": 0
-      }
-    ],
-    "postId": "lcrp23ka39h6p0h3ypm",
-    "date": "11/01/2023"
-  },
-  {
-    "body": "ddd",
-    "img": {},
-    "comments": [],
-    "reactionEmoji": [
-      {
-        "type": "😀",
-        "count": 0
-      },
-      {
-        "type": "😥",
-        "count": 0
-      },
-      {
-        "type": "😮",
-        "count": 0
-      }
-    ],
-    "postId": "lcrp48y9qa9zykqnthg",
-    "date": "11/01/2023"
-  },
-  {
-    "body": "asdf",
-    "img": {},
-    "comments": [],
-    "reactionEmoji": [
-      {
-        "type": "😀",
-        "count": 0
-      },
-      {
-        "type": "😥",
-        "count": 0
-      },
-      {
-        "type": "😮",
-        "count": 0
-      }
-    ],
-    "postId": "lcrp4jgdpy2vtlmsow",
-    "date": "11/01/2023"
-  },
-  {
-    "body": "sss",
-    "img": {},
-    "comments": [],
-    "reactionEmoji": [
-      {
-        "type": "😀",
-        "count": 0
-      },
-      {
-        "type": "😥",
-        "count": 0
-      },
-      {
-        "type": "😮",
-        "count": 0
-      }
-    ],
-    "postId": "lcrp712mrs41rf3gt2r",
-    "date": "11/01/2023"
-  }
+  "{\"body\":\"damage\",\"comments\":[],\"reactionEmoji\":[{\"type\":\"😀\",\"count\":0},{\"type\":\"😥\",\"count\":0},{\"type\":\"😮\",\"count\":0}]}",
+  "[object Object]"
 ]
