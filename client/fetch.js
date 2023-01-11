@@ -2,6 +2,8 @@ console.log('fetch.js')
 const form = document.querySelector('form');
 const postContent = document.querySelector('#post-content');
 const postButton = document.querySelector('#post-button');
+const img = document.querySelector('#img');
+const formData = new FormData();
 
 // commentInputs.addEventListener("click", function(e) {
 //     e.preventDefault();
@@ -10,9 +12,16 @@ const postButton = document.querySelector('#post-button');
 
 postButton.addEventListener("click", function(e) {
     e.preventDefault();
-    console.log(postContent.value)
+    let imgData = img.files[0]
+    console.log(imgData)
+    formData.append("photo", imgData);
+    console.log(formData.get("photo"))
+
+
+
     let data = {
         body: postContent.value,
+        img: formData,
         comments: [],
         reactionEmoji: [{
             "type": "😀",
@@ -27,6 +36,7 @@ postButton.addEventListener("click", function(e) {
             "count": 0
           }]
     }
+
     sendPost(data)
   });
 
@@ -213,12 +223,8 @@ const incrementEmoji = (type, count, postId) => {
             //find right emoji inside the right emojiContainer
             let emojiNode =  emojiContainer.childNodes.forEach(n => {
                 console.log(n)  
-                emojiIndex++
-
                 if(`'${n.childNodes[0].innerText}'`.includes(`'${type}'`)) {
-                    console.log(emojiIndex)
                     count++
-                    console.log(parseInt(n.childNodes[1].textContent++))
                 }
             })
 

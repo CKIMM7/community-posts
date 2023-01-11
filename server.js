@@ -47,7 +47,7 @@ app.get('/:id', (req, res)=> {
 //Working so far with req.body
 app.post('/posts', (req, res)=> {
 
-    console.log('req.body')
+    console.log(req.body)
     
     let postToAdd = req.body;
     postToAdd.postId = uniqueId();
