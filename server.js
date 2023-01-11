@@ -89,7 +89,7 @@ app.get('/:id', (req, res)=> {
 //Users should be able to anonymously post journal entries. (3)
 //Working so far with req.body
 app.post('/posts', upload.single('photo') ,(req, res)=> {
-
+    console.log(req.file)
     let postToAdd = JSON.parse(req.body.data);
     console.log(postToAdd)
 
@@ -101,8 +101,6 @@ app.post('/posts', upload.single('photo') ,(req, res)=> {
     if(req.file) {
         postToAdd.img = `../images/post/${req.file.filename}`
     }
-
-
 
     postToAdd.postId = uniqueId();  
     postToAdd.date = getDate();
