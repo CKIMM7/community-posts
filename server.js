@@ -90,6 +90,9 @@ app.get('/:id', (req, res)=> {
 //Working so far with req.body
 app.post('/posts', upload.single('photo') ,(req, res)=> {
 
+    let postToAdd = JSON.parse(req.body.data);
+    console.log(postToAdd)
+
     if(!req.body.data.body) {
 
         //handle error here somehow
@@ -99,8 +102,7 @@ app.post('/posts', upload.single('photo') ,(req, res)=> {
         postToAdd.img = `../images/post/${req.file.filename}`
     }
 
-    let postToAdd = JSON.parse(req.body.data);
-    console.log(postToAdd)
+
 
     postToAdd.postId = uniqueId();  
     postToAdd.date = getDate();
