@@ -15,7 +15,7 @@ postButton.addEventListener("click", function(e) {
     e.preventDefault();
 
     let data = {
-        body: postContent1.value,
+        body: postContent.value,
         comments: [],
         reactionEmoji: [{
             "type": "😀",
