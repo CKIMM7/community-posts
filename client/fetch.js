@@ -15,7 +15,7 @@ postButton.addEventListener("click", function(e) {
     e.preventDefault();
 
     let data = {
-        body: postContent.value,
+        body: postContent1.value,
         comments: [],
         reactionEmoji: [{
             "type": "😀",
@@ -41,6 +41,7 @@ postButton.addEventListener("click", function(e) {
     console.log(formData.get("data"))
 
     sendPost(formData)
+
   });
 
   const sendPost = (input) => {
