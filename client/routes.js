@@ -7,12 +7,14 @@ const routes = (path) => {
         
         if(!postsGlobal) {
             formContainer.style.display = 'none';
+            modal.style.display = "none";
             getPosts()
         }
 
         else {
             contentContainer.style.display = 'flex';
             formContainer.style.display = 'none';
+            modal.style.display = "none";
         }  
 
     } else if (path === "post") {

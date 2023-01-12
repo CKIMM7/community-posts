@@ -1,4 +1,5 @@
 console.log('fetch.js')
+const modal = document.querySelector('#modal');
 const form = document.querySelector('form');
 const postContent = document.querySelector('#post-content');
 const postButton = document.querySelector('#post-button');
@@ -44,7 +45,10 @@ postButton.addEventListener("click", function(e) {
 
   const sendPost = (input) => {
 
-    //console.log(input.get("photo"))
+    console.log('request has been sent please wait for response')
+    modal.style.display = "block";
+    formContainer.style.display = 'none'
+
     let url = `http://localhost:3000/posts`
     let obj = {
         method: 'POST',
@@ -59,7 +63,12 @@ postButton.addEventListener("click", function(e) {
         try {
             const response = await fetch(url, obj);
             const data = await response.json();
+            console.log('data returned')
             console.log(data)
+            console.log('turn off modal ')
+            modal.style.display = "none";
+            routes()
+
             res(data)
         } catch (err) {
 
