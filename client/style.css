@@ -158,3 +158,11 @@ border: 1px solid #888;
 width: 80%;
 z-index: 9999; /* Sit on top */
 }
+
+#path {
+display: block; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 9999; /* Sit on top */
+left: 50%;
+top: 50%;
+}

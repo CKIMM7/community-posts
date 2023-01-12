@@ -31,16 +31,34 @@
         "body": "asdf",
         "commentId": "lcqp6p5c6gijm5miplq",
         "date": "10/01/2023"
+      },
+      {
+        "postId": 1,
+        "body": "haha",
+        "commentId": "lct4pjkcf14vdm98ibj",
+        "date": "12/01/2023"
+      },
+      {
+        "postId": 1,
+        "body": "lol",
+        "commentId": "lct4ttsncjekgw3fm4",
+        "date": "12/01/2023"
+      },
+      {
+        "postId": 1,
+        "body": "jaja",
+        "commentId": "lct4u3m3qt8dr9yq5lh",
+        "date": "12/01/2023"
       }
     ],
     "reactionEmoji": [
       {
         "type": "😀",
-        "count": 5
+        "count": 6
       },
       {
         "type": "😥",
-        "count": 8
+        "count": 9
       },
       {
         "type": "😮",
@@ -142,7 +160,7 @@
     "reactionEmoji": [
       {
         "type": "😀",
-        "count": 10
+        "count": 11
       },
       {
         "type": "😥",
@@ -163,6 +181,12 @@
         "body": "comment",
         "commentId": "lct3jp000ng62689t5v",
         "date": "12/01/2023"
+      },
+      {
+        "postId": "lct3cx0rra2w4pj9of",
+        "body": "dang",
+        "commentId": "lct4spfyuzsz282uqgo",
+        "date": "12/01/2023"
       }
     ],
     "reactionEmoji": [
@@ -181,6 +205,27 @@
     ],
     "img": "https://student-server-bucket.s3.amazonaws.com/photo-1673527985522.png",
     "postId": "lct3cx0rra2w4pj9of",
+    "date": "12/01/2023"
+  },
+  {
+    "body": "aws",
+    "comments": [],
+    "reactionEmoji": [
+      {
+        "type": "😀",
+        "count": 0
+      },
+      {
+        "type": "😥",
+        "count": 0
+      },
+      {
+        "type": "😮",
+        "count": 0
+      }
+    ],
+    "img": "https://student-server-bucket.s3.amazonaws.com/photo-1673528585766.png",
+    "postId": "lct3plsaw93s6cber8",
     "date": "12/01/2023"
   }
 ]

@@ -6,10 +6,11 @@ const postButton = document.querySelector('#post-button');
 const img = document.querySelector('#img');
 const formData = new FormData();
 
-// commentInputs.addEventListener("click", function(e) {
-//     e.preventDefault();
-//     console.log('event lisenter')
-//   });
+
+let url;
+window.location.href.includes('localhost') ? url = 'http://localhost:3000/' : url = 'https://mywordpush.herokuapp.com/'
+
+console.log(url)
 
 postButton.addEventListener("click", function(e) {
     e.preventDefault();
@@ -45,7 +46,6 @@ postButton.addEventListener("click", function(e) {
     modal.style.display = "block";
     formContainer.style.display = 'none'
 
-    let url = `http://localhost:3000/posts`
     let obj = {
         method: 'POST',
         headers: { 'Accept': 'application/json',},
@@ -57,7 +57,7 @@ postButton.addEventListener("click", function(e) {
         try {
 
 
-            const response = await fetch(url, obj);
+            const response = await fetch(`${url}posts`, obj);
             const data = await response.json();
             postsGlobal = data
             modal.style.display = "none";
@@ -76,12 +76,9 @@ postButton.addEventListener("click", function(e) {
 
 const getPosts = () => {
 
-
-    let url = `http://localhost:3000/api`
-
     return new Promise(async (res, rej) => {
         try {
-            const response = await fetch(url);
+            const response = await fetch(`${url}api`);
             const data = await response.json();
             postsGlobal = data;
             displayPosts()    
@@ -98,7 +95,6 @@ const sendComment = (postId, e) => {
 
     if(e.code == 'Enter') {
     
-    let url = `http://localhost:3000/comments`
     let obj = {
         method: 'POST',
         headers: {
@@ -110,7 +106,7 @@ const sendComment = (postId, e) => {
     return new Promise(async (res, rej) => {
 
         try {
-            const response = await fetch(url, obj);
+            const response = await fetch(`${url}comments`, obj);
             const data = await response.json();
 
             if(typeof(postId) === 'string') {
@@ -194,7 +190,6 @@ const incrementEmoji = (type, count, postId) => {
         emojiToAdd: type
     }
 
-    let url = `http://localhost:3000/emojis`
     let obj = {
         method: 'POST',
         headers: {
@@ -206,7 +201,7 @@ const incrementEmoji = (type, count, postId) => {
     return new Promise(async (res, rej) => {
 
         try {
-            const response = await fetch(url, obj);
+            const response = await fetch(`${url}emojis`, obj);
             const data = await response.json();
 
             //update dom for emojis
