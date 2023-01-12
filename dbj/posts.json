@@ -150,14 +150,21 @@
       },
       {
         "type": "😮",
-        "count": 4
+        "count": 5
       }
     ],
     "img": "../images/background/landing_page_background.jpg"
   },
   {
     "body": "netlify",
-    "comments": [],
+    "comments": [
+      {
+        "postId": "lct3cx0rra2w4pj9of",
+        "body": "comment",
+        "commentId": "lct3jp000ng62689t5v",
+        "date": "12/01/2023"
+      }
+    ],
     "reactionEmoji": [
       {
         "type": "😀",

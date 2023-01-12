@@ -119,10 +119,10 @@ const sendComment = (postId, e) => {
                 return post.postId == postId;
             })
 
-            console.log(findPostIndex)
+            //console.log(findPostIndex)
             let commentToAdd = data[findPostIndex].comments[data[findPostIndex].comments.length - 1]
 
-            console.log(commentToAdd)
+            //console.log(commentToAdd)
 
              //new node
              let comment = document.createElement('div');
@@ -137,11 +137,11 @@ const sendComment = (postId, e) => {
  
              //reference node
              let inputList = document.querySelectorAll('.comment-input');
-             console.log(inputList[findPostIndex])
+             //console.log(inputList[findPostIndex])
  
              //parent node
              let parentNode = document.querySelectorAll('.comments');
-             console.log(parentNode[findPostIndex])
+             //console.log(parentNode[findPostIndex])
 
              parentNode[findPostIndex].insertBefore(comment, inputList[findPostIndex]);
 
@@ -149,7 +149,7 @@ const sendComment = (postId, e) => {
 
             if(typeof(postId) === 'number') {
 
-            console.log(data[postId -1].comments[data[postId -1].comments.length -1])
+            //console.log(data[postId -1].comments[data[postId -1].comments.length -1])
             let commentToAdd = data[postId -1].comments[data[postId -1].comments.length -1]
 
             //new node
@@ -166,14 +166,14 @@ const sendComment = (postId, e) => {
 
             //reference node
             let inputList = document.querySelectorAll('.comment-input');
-            console.log(inputList[postId -1])
+            //console.log(inputList[postId -1])
 
             //parent node
             let parentNode = document.querySelectorAll('.comments');
-            console.log(parentNode[postId -1])
+            //console.log(parentNode[postId -1])
 
             parentNode[postId -1].insertBefore(comment, inputList[postId -1]);
-            console.log(parentNode[postId -1])
+            //console.log(parentNode[postId -1])
         }   
 
             res(data)
@@ -187,9 +187,6 @@ const sendComment = (postId, e) => {
 }
    
 const incrementEmoji = (type, count, postId) => {
-    console.log(type)
-    console.log(count)
-    console.log(postId)
 
     let emojiIndex = -1
     let input = {
@@ -228,7 +225,7 @@ const incrementEmoji = (type, count, postId) => {
             
             //find right emoji inside the right emojiContainer
             let emojiNode =  emojiContainer.childNodes.forEach(n => {
-                console.log(n)  
+                //console.log(n)  
                 if(`'${n.childNodes[0].innerText}'`.includes(`'${type}'`)) {
                     console.log(n.childNodes[1].innerText++)
                 }
