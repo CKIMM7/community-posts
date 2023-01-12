@@ -19,3 +19,5 @@
 ## wins
 - Getting Multer and S3 Bucket to work together.
 
+## Future Features
+- Adding Gifty to let users choose gifs 
