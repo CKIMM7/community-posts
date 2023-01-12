@@ -4,11 +4,16 @@ const formContainer = document.querySelector('#form-container');
 
 
 let postsGlobal;
+let firstLoaded = true;
+let reLoaded = false;
+
+let currentArray;
+
 let show = false;
 
 const displayPosts = () => {
 
-    console.log(postsGlobal)
+    firstLoaded = false
     postsGlobal.forEach((p, i) => {
 
         //console.log(p)

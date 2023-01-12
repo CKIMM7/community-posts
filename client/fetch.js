@@ -52,23 +52,26 @@ postButton.addEventListener("click", function(e) {
     let url = `http://localhost:3000/posts`
     let obj = {
         method: 'POST',
-        headers: {
-        'Accept': 'application/json',
-        },
+        headers: { 'Accept': 'application/json',},
         body: input
         }
 
     return new Promise(async (res, rej) => {
 
         try {
+
+
             const response = await fetch(url, obj);
             const data = await response.json();
             console.log('data returned')
             console.log(data)
+            postsGlobal = data
             console.log('turn off modal ')
             modal.style.display = "none";
+            reLoaded = true
             routes()
 
+            reLoaded = false
             res(data)
         } catch (err) {
 

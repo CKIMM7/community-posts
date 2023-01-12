@@ -154,5 +154,151 @@
       }
     ],
     "img": "../images/background/landing_page_background.jpg"
+  },
+  {
+    "body": "some thing",
+    "comments": [],
+    "reactionEmoji": [
+      {
+        "type": "😀",
+        "count": 0
+      },
+      {
+        "type": "😥",
+        "count": 0
+      },
+      {
+        "type": "😮",
+        "count": 0
+      }
+    ],
+    "img": "https://student-server-bucket.s3.amazonaws.com/photo-1673522755812.png",
+    "postId": "lct090cpz8kptjnw6kp",
+    "date": "12/01/2023"
+  },
+  {
+    "body": "firebase",
+    "comments": [],
+    "reactionEmoji": [
+      {
+        "type": "😀",
+        "count": 0
+      },
+      {
+        "type": "😥",
+        "count": 0
+      },
+      {
+        "type": "😮",
+        "count": 0
+      }
+    ],
+    "img": "https://student-server-bucket.s3.amazonaws.com/photo-1673524939728.png",
+    "postId": "lct1jgjtjzo5o7z3ovd",
+    "date": "12/01/2023"
+  },
+  {
+    "body": "netlify",
+    "comments": [],
+    "reactionEmoji": [
+      {
+        "type": "😀",
+        "count": 0
+      },
+      {
+        "type": "😥",
+        "count": 0
+      },
+      {
+        "type": "😮",
+        "count": 0
+      }
+    ],
+    "postId": "lct1mw2rjczvi70oo3",
+    "date": "12/01/2023"
+  },
+  {
+    "body": "ec2",
+    "comments": [],
+    "reactionEmoji": [
+      {
+        "type": "😀",
+        "count": 0
+      },
+      {
+        "type": "😥",
+        "count": 0
+      },
+      {
+        "type": "😮",
+        "count": 0
+      }
+    ],
+    "img": "https://student-server-bucket.s3.amazonaws.com/photo-1673525141886.png",
+    "postId": "lct1nsjtg7fbwdm8sam",
+    "date": "12/01/2023"
+  },
+  {
+    "body": "save json",
+    "comments": [],
+    "reactionEmoji": [
+      {
+        "type": "😀",
+        "count": 0
+      },
+      {
+        "type": "😥",
+        "count": 0
+      },
+      {
+        "type": "😮",
+        "count": 0
+      }
+    ],
+    "img": "https://student-server-bucket.s3.amazonaws.com/photo-1673525174609.png",
+    "postId": "lct1oj4o1gwpmpjd4h6",
+    "date": "12/01/2023"
+  },
+  {
+    "body": "aaa",
+    "comments": [],
+    "reactionEmoji": [
+      {
+        "type": "😀",
+        "count": 0
+      },
+      {
+        "type": "😥",
+        "count": 0
+      },
+      {
+        "type": "😮",
+        "count": 0
+      }
+    ],
+    "img": "https://student-server-bucket.s3.amazonaws.com/photo-1673525203273.png",
+    "postId": "lct1p45fatr2h7icvde",
+    "date": "12/01/2023"
+  },
+  {
+    "body": "firebase",
+    "comments": [],
+    "reactionEmoji": [
+      {
+        "type": "😀",
+        "count": 0
+      },
+      {
+        "type": "😥",
+        "count": 0
+      },
+      {
+        "type": "😮",
+        "count": 0
+      }
+    ],
+    "img": "https://student-server-bucket.s3.amazonaws.com/photo-1673525291467.png",
+    "postId": "lct1r0dble7f8xew7nn",
+    "date": "12/01/2023"
   }
 ]
