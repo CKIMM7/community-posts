@@ -7,13 +7,13 @@ const routes = (path) => {
         
         //when website first loaded
         if(!postsGlobal && firstLoaded) {
-            console.log('when website first loaded')
+
             formContainer.style.display = 'none';
             modal.style.display = "none";
             getPosts()
         } else if(postsGlobal && reLoaded) {
 
-            console.log('when website needs to reload with new data')
+
             contentContainer.style.display = 'flex';
             formContainer.style.display = 'none';
             modal.style.display = "none";
@@ -27,7 +27,7 @@ const routes = (path) => {
         }  
 
     } else if (path === "post") {
-        console.log('write posts')
+
         contentContainer.style.display = 'none';
         formContainer.style.display = 'block';
 
