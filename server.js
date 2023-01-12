@@ -3,35 +3,31 @@ const express =  require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const multer  = require('multer');
-const fs = require('fs')
+const aws = require('aws-sdk')
+const multerS3 = require('multer-s3');
+require('dotenv').config()
 
 const port = process.env.PORT || 3000;
 
+aws.config.update({
+    secretAccessKey: process.env.SECRETACCESSKEY,
+    accessKeyId: process.env.ACCESSKEYID,
+    region: process.env.REGION
+});
+
+const s3 = new aws.S3();
+
+
 // Set The Storage Engine
-
-//destination: './client/images/post',
-
-//const upload = multer({ dest: './client/images/post' });
-
-// Set The Storage Engine
-const storage = multer.diskStorage({
+const localStorage = multer.diskStorage({
     destination: './client/images/post',
     filename: function(req, file, cb){
     cb(null,file.fieldname + '-' + Date.now() + path.extname(file.originalname));
     }
   });
-  
-  // Init Upload
-  const upload = multer({
-    storage: storage,
-    limits:{fileSize: 1000000},
-    fileFilter: function(req, file, cb){
-      checkFileType(file, cb);
-    }
-    })
-  
-  // Check File Type
-  function checkFileType(file, cb){
+
+// Check File Type
+function checkFileType(file, cb){
     console.log('checkFileType')
     // Allowed ext
     const filetypes = /jpeg|jpg|png|gif/;
@@ -46,8 +42,30 @@ const storage = multer.diskStorage({
       cb('Error: Images Only!');
     }
   }
+  
+
+const storageS3 = multerS3({
+    s3: s3,
+    acl: 'public-read',
+    bucket: 'student-server-bucket',
+    key: function (req, file, cb) {
+        console.log(file);
+        cb(null,file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+    }
+})
+
+// Init Upload
+const upload = multer({
+    storage: storageS3,
+    // limits:{fileSize: 1000000},
+    // fileFilter: function(req, file, cb){
+    //   checkFileType(file, cb);
+    // }
+    })
+  
 
 const app = express();
+
 app.use(express.json())
 app.use(bodyParser.json());
 app.use(express.urlencoded());
@@ -77,7 +95,6 @@ app.get('/api', (req, res)=> {
 //Users should be able to view other peoples' entries. (2)
 //working so far
 
-
 app.get('/:id', (req, res)=> {
     const postIdSearch = postsData.findIndex(post => {
         return post.postId.toString() === req.params.id;
@@ -89,6 +106,7 @@ app.get('/:id', (req, res)=> {
 //Users should be able to anonymously post journal entries. (3)
 //Working so far with req.body
 app.post('/posts', upload.single('photo') ,(req, res)=> {
+    console.log('req.file')
     console.log(req.file)
     let postToAdd = JSON.parse(req.body.data);
     console.log(postToAdd)
@@ -96,10 +114,10 @@ app.post('/posts', upload.single('photo') ,(req, res)=> {
     if(!req.body.data.body) {
 
         //handle error here somehow
-    }
+    }   
 
     if(req.file) {
-        postToAdd.img = `../images/post/${req.file.filename}`
+        postToAdd.img = `${req.file.location}`
     }
 
     postToAdd.postId = uniqueId();  

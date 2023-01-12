@@ -36,7 +36,7 @@
     "reactionEmoji": [
       {
         "type": "😀",
-        "count": 4
+        "count": 5
       },
       {
         "type": "😥",
@@ -198,7 +198,7 @@
     "img": "../images/post/photo-1673470443865.png"
   },
   {
-    "body": "file type",
+    "body": "it must work",
     "comments": [],
     "reactionEmoji": [
       {
@@ -214,50 +214,8 @@
         "count": 0
       }
     ],
-    "postId": "lcs544p09wrmz2l8hn9",
-    "date": "11/01/2023",
-    "img": "../images/post/photo-1673470477753.png"
-  },
-  {
-    "body": "flask",
-    "comments": [],
-    "reactionEmoji": [
-      {
-        "type": "😀",
-        "count": 0
-      },
-      {
-        "type": "😥",
-        "count": 0
-      },
-      {
-        "type": "😮",
-        "count": 0
-      }
-    ],
-    "img": "../images/post/photo-1673474603560.png",
-    "postId": "lcs7kk6pstb9yylyuf",
-    "date": "11/01/2023"
-  },
-  {
-    "body": "save this",
-    "comments": [],
-    "reactionEmoji": [
-      {
-        "type": "😀",
-        "count": 0
-      },
-      {
-        "type": "😥",
-        "count": 0
-      },
-      {
-        "type": "😮",
-        "count": 0
-      }
-    ],
-    "img": "../images/post/photo-1673475735438.png",
-    "postId": "lcs88tjp4upr11r3y3k",
-    "date": "11/01/2023"
+    "img": "https://student-server-bucket.s3.amazonaws.com/photo-1673519069895.png",
+    "postId": "lcsy1qjnbqu22ib1rjc",
+    "date": "12/01/2023"
   }
 ]
