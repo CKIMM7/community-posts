@@ -154,5 +154,26 @@
       }
     ],
     "img": "../images/background/landing_page_background.jpg"
+  },
+  {
+    "body": "netlify",
+    "comments": [],
+    "reactionEmoji": [
+      {
+        "type": "😀",
+        "count": 0
+      },
+      {
+        "type": "😥",
+        "count": 0
+      },
+      {
+        "type": "😮",
+        "count": 0
+      }
+    ],
+    "img": "https://student-server-bucket.s3.amazonaws.com/photo-1673527985522.png",
+    "postId": "lct3cx0rra2w4pj9of",
+    "date": "12/01/2023"
   }
 ]

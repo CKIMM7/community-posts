@@ -2,7 +2,6 @@ console.log('display.js')
 const contentContainer = document.querySelector('#content-container');
 const formContainer = document.querySelector('#form-container');
 
-
 let postsGlobal;
 let firstLoaded = true;
 let reLoaded = false;
@@ -16,7 +15,6 @@ const displayPosts = () => {
     firstLoaded = false
     postsGlobal.forEach((p, i) => {
 
-        //console.log(p)
         let post = document.createElement('div');
         let body = document.createElement('p');
         let img = document.createElement('img');
@@ -43,7 +41,6 @@ const displayPosts = () => {
 
         commentButton.onclick = function(){
             show = !show
-            console.log(show)
 
             if(show)
             commentSection.style.display = 'block'

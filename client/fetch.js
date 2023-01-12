@@ -36,17 +36,12 @@ postButton.addEventListener("click", function(e) {
     formData.append("photo", imgData);
     formData.append("data", JSON.stringify(data));
 
-
-    console.log(formData.get("photo"))
-    console.log(formData.get("data"))
-
     sendPost(formData)
 
   });
 
   const sendPost = (input) => {
 
-    console.log('request has been sent please wait for response')
     modal.style.display = "block";
     formContainer.style.display = 'none'
 
@@ -64,10 +59,7 @@ postButton.addEventListener("click", function(e) {
 
             const response = await fetch(url, obj);
             const data = await response.json();
-            console.log('data returned')
-            console.log(data)
             postsGlobal = data
-            console.log('turn off modal ')
             modal.style.display = "none";
             reLoaded = true
             routes()
@@ -76,7 +68,6 @@ postButton.addEventListener("click", function(e) {
             res(data)
         } catch (err) {
 
-            console.log(err)
             rej(`${err}`)
         }
     })
@@ -92,14 +83,11 @@ const getPosts = () => {
         try {
             const response = await fetch(url);
             const data = await response.json();
-            console.log(data)
-
             postsGlobal = data;
             displayPosts()    
 
             res(data)
         } catch (err) {
-            console.log(err)
             rej(`${err}`)
         }
     })
