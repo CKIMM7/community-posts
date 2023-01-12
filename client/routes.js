@@ -6,12 +6,14 @@ const routes = (path) => {
     if(!path) {
         
         if(!postsGlobal) {
+            console.log('route with getposts function call')
             formContainer.style.display = 'none';
             modal.style.display = "none";
             getPosts()
         }
 
         else {
+            console.log('route with no function call')
             contentContainer.style.display = 'flex';
             formContainer.style.display = 'none';
             modal.style.display = "none";

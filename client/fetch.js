@@ -88,9 +88,10 @@ const getPosts = () => {
         try {
             const response = await fetch(url);
             const data = await response.json();
+            console.log(data)
 
             postsGlobal = data;
-            displayPosts()
+            displayPosts()    
 
             res(data)
         } catch (err) {
